@@ -1,0 +1,29 @@
+<form method="" class="col-5">
+    <span>WHICH TABLE</span>
+    <br>
+    <input type="number" id="taBle" />
+    <br>
+    <span>TABLE TILL</span>
+    <br>
+    <input type="number" id="Till" />
+    <br>
+    <input type="button" value="Go" onclick="go()" />
+</form>
+<div id="answers">
+</div>
+<script>
+
+    function go() {
+        var num = document.getElementById("taBle").value;
+        var ask = document.getElementById("Till").value;
+        //var i = 0;
+        var html = '';
+        for (i = 1; i <= ask; i++) {
+            var result = num + " x " + i + " = " + num * i;
+            html += '<h2 id="answer" class="col-5">'+result+'</h2>';
+            document.getElementById("answers").innerHTML = html;
+            console.log(result);
+        };
+    };
+    
+</script>
