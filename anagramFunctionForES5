@@ -1,0 +1,7 @@
+function anagram(x) {
+ temp= x.split("").reverse().join("");
+  return temp; 
+}
+
+
+console.log(anagram("test"))
